@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block page %}
+<!-- #columns: holds the columns of the page -->
+<div id="columns" class="widthPad">
+
+
+ {% include 'logos.html' %}
+
+<!-- Right column -->
+<div class="floatRight width73">
+  <form id="contact" action="{{ url_for('publicar') }}" method="POST" style="position: relative; z-index: 1;">
+  <h1>Formulario de <span class="dark">Publicación</span></h1>
+  
+
+	
+
+
+	  <p>
+	      <input type="submit" value="SEND" class="button" />
+	      <input type="reset" value="RESET" class="button" />
+	    </p>
+    
+			</form>	
+        </div>
+
+
+
+
+
+
+   
+
+  
+
+    <p>&nbsp;
+      
+    </p>
+
+
+
+  
+
+
+
+  </form>
+
+
+
+
+</div>
+<!-- Right column end -->
+
+
+</div>
+<!-- #columns end -->
+
+{% endblock %}

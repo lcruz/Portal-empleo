@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block page %}
+<!-- #columns: holds the columns of the page -->
+<div id="columns" class="widthPad">
+
+
+ {% include 'logos.html' %}
+
+<!-- Right column -->
+<div class="floatRight width73">
+  <form id="contact" action="{{ url_for('publicar') }}" method="POST" style="position: relative; z-index: 1;">
+  <h1>Formulario de <span class="dark">Publicación</span></h1>
+ 
+
+		{{ form.csrf_token }}
+	<p>  {{ form.tipo.label }} {{ form.tipo  }}</p>
+	<p>  {{ form.titulo.label }} {{ form.titulo(size=50)  }}</p>
+	<p>  {{ form.empresa.label }} {{ form.empresa(size=50)  }}</p>
+	<p>  {{ form.ciudad.label }} {{ form.ciudad  }}</p>
+	<p>  {{ form.web.label }} {{ form.web(size=50)  }}</p>
+	<p>  {{ form.descripcion.label }} {{ form.descripcion(rows=5, cols=50)  }}</p>
+	<p>  {{ form.pregunta.label }} {{ form.pregunta(size=50)  }}</p>
+	<p>  {{ form.firma.label }} {{ form.firma(size=50)  }}</p>
+
+
+	  <p>
+	      <input type="submit" value="SEND" class="button" />
+	      <input type="reset" value="RESET" class="button" />
+	    </p>
+       	{% if form.empresa.errors %}
+		            <ul class="errors">
+		                {% for error in form.empresa.errors %}
+		                <li>{{ error }}</li>
+		                {% endfor %}
+		            </ul>
+		            {% endif %}
+			</form>	
+        </div>
+
+
+
+
+
+
+   
+
+  
+
+    <p>&nbsp;
+      
+    </p>
+
+
+
+  
+
+
+
+  </form>
+
+
+
+
+</div>
+<!-- Right column end -->
+
+
+</div>
+<!-- #columns end -->
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block page %}
+<!-- #columns: holds the columns of the page -->
+   <div id="columns" class="widthPad">
+
+
+   {% include 'logos.html' %}
+
+
+   <!-- Right column -->
+   <div class="floatRight width75">
+	   <h1>Portal <span class="dark">Empleo</span></h1>
+
+	     <p>
+	    
+		    Este es un sitio demo para mostrar el uso de Flask!
+		  </p>
+     <h1>Anuncios <span class="dark">disponibles</span></h1>
+
+
+     <!-- Start Post -->
+	{% for anuncio in anuncios %}
+     <div class="post">
+
+       <div class="date">
+         <span class="month">Apr</span>
+         <span class="day">8</span>
+       </div>
+
+       <p>
+         <span class="title">{{anuncio.titulo}}</span>
+	   	 {{anuncio.empresa}} - {{anuncio.web}}
+	    </p>
+	    <p>
+	      <a href="{{ url_for('detalle', key=anuncio.key()) }}">Más información</a>
+	    </p>
+
+     </div>
+	{% endfor %}
+     <!-- End Post -->
+
+   </div>
+   <!-- Right column end -->
+
+
+   </div>
+   <!-- #columns end -->
+{% endblock %}

@@ -1,0 +1,2 @@
+CSRF_ENABLED=True
+CSRF_SESSION_LKEY='dev_key_h8asSNJ9s9=+'

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+
+  <title>PortalEmpleo Demo</title>
+
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="author" content="Luis Cruz" />
+  <meta name="description" content="Site Description Here" />
+
+
+  <link rel="stylesheet" type="text/css" href="/static/css/layout.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="/static/css/html.css" media="screen, projection, tv " />
+
+  
+  <style type="text/css">
+<!--
+.style2 {color: #627E9A}
+.style3 {color: #62CC3C}
+.style6 {color: #5C8096}
+-->
+  </style>
+   {% block head %}{% endblock %}
+</head>
+
+<body>
+
+<!-- #content: holds all except site footer - causes footer to stick to bottom -->
+<div id="content">
+
+  <!-- #header: holds the logo and top links -->   
+  <div id="header" class="width">
+  
+  <img src="/static/images/logo.gif" alt="Your logo goes here"/>
+  
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/publicar">Publicar</a></li>
+      <li><a href="" class="last">Nosotros</a></li>
+    </ul>
+
+  </div>
+  <!-- #header end -->
+
+
+  <!-- #headerImg: holds the main header image or flash -->
+  <div id="headerImg" class="width"></div>
+
+
+
+
+  <!-- #menu: the main large box site menu -->
+  <div id="menu" class="width" style="height:10px;background-color:#3B5D77;">
+
+  
+  </div>
+ <div  class="width" style="height:10px;"></div>
+  <!-- #menu end -->
+
+
+
+  <!-- #page: holds the page content -->
+  <div id="page">
+  {% block page %}{% endblock %}
+
+   </div>
+  <!-- #page end -->
+
+</div>
+<!-- #content end -->
+
+
+
+
+<!-- #footer: holds the site footer (logo and links) -->
+<div id="footer">
+
+  <!-- #bg: applies the site width and footer background -->
+  <div id="bg" class="width">
+  
+  <img src="/static/images/logo.gif" alt="Your logo goes here"/>
+  
+    <ul>
+      <li><a href="http://www.studio7designs.com/photography_gallery">Design</a></li>
+      <li><a href="http://www.arbutusphotography.com">Inspired by</a></li>
+      <li><a href="http://www.studio7designs.com" class="last">studio7designs.com</a></li>
+	</ul>
+
+  </div>
+  <!-- #bg end -->
+
+</div>
+<!-- #footer end -->
+
+</body>
+
+</html>
